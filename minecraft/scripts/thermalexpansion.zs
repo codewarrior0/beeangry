@@ -91,6 +91,7 @@ recipes.remove(<ore:nuggetInvar>);
 recipes.remove(<ore:nuggetEnderium>);
 recipes.remove(<ore:nuggetAluminum>);
 recipes.remove(<ore:nuggetConstantan>);
+furnace.remove(<railcraft:nugget:1>);
 
 mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom:1>);
 

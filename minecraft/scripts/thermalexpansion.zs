@@ -1,4 +1,5 @@
 var iron = <ore:nuggetIron>;
+var gold = <ore:nuggetGold>;
 var copper = <ore:nuggetCopper>;
 var tin = <ore:nuggetTin>;
 var silver = <ore:nuggetSilver>;
@@ -12,16 +13,17 @@ var bronze = <ore:nuggetBronze>;
 var signalum = <ore:nuggetSignalum>;
 var lumium = <ore:nuggetLumium>;
 var enderium = <ore:nuggetEnderium>;
-var alum = <ore:nuggetAluminum>
-var constantan = <ore:nuggetConstantan>
+var alum = <ore:nuggetAluminum>;
+var constantan = <ore:nuggetConstantan>;
 
 var gear = <ore:gearStone>;
 
 var manyullyn = <tconstruct:materials:30>;
-var solar = <ic2:blockGenerator:3>;
+var solar = <ic2:te:8>;
 
 //change recipe gears
 recipes.remove(<ore:gearIron>);
+recipes.remove(<ore:gearGold>);
 recipes.remove(<ore:gearCopper>);
 recipes.remove(<ore:gearTin>);
 recipes.remove(<ore:gearSilver>);
@@ -35,22 +37,20 @@ recipes.remove(<ore:gearBronze>);
 recipes.remove(<ore:gearSignalum>);
 recipes.remove(<ore:gearLumium>);
 recipes.remove(<ore:gearEnderium>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearIron>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearCopper>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearTin>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearSilver>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearLead>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearNickel>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearPlatinum>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearMithril>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearElectrum>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearInvar>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearBronze>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearSignalum>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearLumium>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearEnderium>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearAluminum>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:gearConstantan>);
+recipes.remove(<ore:gearAluminum>);
+recipes.remove(<ore:gearConstantan>);
+
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearIron>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearCopper>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearTin>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearSilver>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearLead>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearNickel>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearElectrum>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearBronze>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearSignalum>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearAluminum>,<*>,<tconstruct:cast_custom:4>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:gearConstantan>,<*>,<tconstruct:cast_custom:4>);
 
 recipes.addShaped(<thermalfoundation:material:24>,[[iron,iron,iron],[iron,gear,iron],[iron,iron,iron]]);
 recipes.addShaped(<thermalfoundation:material:25>,[[gold,gold,gold],[gold,gear,gold],[gold,gold,gold]]);
@@ -78,7 +78,7 @@ recipes.remove(<ore:nuggetCopper>);
 recipes.remove(<ore:nuggetTin>);
 recipes.remove(<ore:nuggetSilver>);
 recipes.remove(<ore:nuggetLead>);
-recipes.remove(<ore:nuggetElectrumFlux>);
+recipes.remove(<ore:nuggetElectrum>);
 recipes.remove(<ore:nuggetAluminium>);
 recipes.remove(<ore:nuggetCobalt>);
 recipes.remove(<ore:nuggetArdite>);
@@ -94,29 +94,7 @@ recipes.remove(<ore:nuggetConstantan>);
 
 mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom:1>);
 
-var grainMetallic = <morebees:grainMetallic>
-var grainCrystal = <morebees:grainCrystal>
+recipes.remove(<immersiveengineering:mold:1>);
 
-//add recipeInduction metals
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustIron>,grainMetallic,<minecraft:iron_block>,null);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustGold>,grainMetallic,<minecraft:gold_block>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustCopper>,grainMetallic,<thermalfoundation:storage>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustTin>,grainMetallic,<thermalfoundation:storage:1>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustSilver>,grainMetallic,<thermalfoundation:storage:2>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustLead>,grainMetallic,<thermalfoundation:storage:3>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustAluminum>,grainMetallic,<thermalfoundation:storage:4>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustNickel>,grainMetallic,<thermalfoundation:storage:5>);
-mods.thermalexpansion.Smelter.addRecipe(4000,<ore:dustPlatinum>,grainMetallic,<thermalfoundation:storage:6>);
-
-//change recipe CreativeEnergyCell
-mods.avaritia.ExtremeCrafting.remove(<thermalexpansion:Cell>);
-mods.avaritia.ExtremeCrafting.addShaped(<thermalexpansion:Cell>,
-	[[enderium,manyullyn,manyullyn,manyullyn,duct,manyullyn,manyullyn,manyullyn,enderium],
-	[manyullyn,<morebees:combRock>,<forestry:beeCombs:14>,<forestry:beeCombs:14>,duct,solar,solar,<forestry:beeCombs:2>,manyullyn],
-	[manyullyn,<forestry:factory:3>,<forestry:factory:3>,<forestry:factory:3>,duct,solar,solar,solar,manyullyn],
-	[manyullyn,<forestry:beeCombs:2>,<forestry:engine:2>,<forestry:engine:2>,duct,<forestry:engine>,solar,solar,manyullyn],
-	[duct,duct,duct,duct,<thermalexpansion:Frame:9>,duct,duct,duct,duct],
-	[manyullyn,<ExtraBees:honeyComb:3>,<Railcraft:machine.beta:4>,<Railcraft:machine.beta:9>,duct,<BigReactors:BRReactorPart:3>,<BigReactors:BRReactorPart:2>,<BigReactors:BRDevice>,manyullyn],
-	[manyullyn,<ExtraBees:honeyComb:3>,<Railcraft:machine.beta:4>,<Railcraft:machine.beta:9>,duct,<BigReactors:BRReactorPart:1>,<BigReactors:YelloriumFuelRod>,<ExtraBees:honeyComb:83>,manyullyn],
-	[manyullyn,<BuildCraft|Factory:refineryBlock>,<Railcraft:machine.beta:6>,<ExtraBees:honeyComb:6>,duct,<thermalfoundation:bucket:4>,<BigReactors:YelloriumFuelRod>,<ExtraBees:honeyComb:83>,manyullyn],
-	[<RedstoneArsenal:material:64>,manyullyn,manyullyn,manyullyn,duct,manyullyn,manyullyn,manyullyn,<RedstoneArsenal:material:64>]]);
+recipes.remove(<thermalexpansion:machine:5>);
+recipes.addShaped(<thermalexpansion:machine:5>,[[<ore:ingotBronze>,<storagedrawers:compDrawers>,<ore:ingotBronze>],[<minecraft:piston>,<thermalexpansion:frame:0>,<minecraft:piston>],[<ore:gearSignalum>,<thermalfoundation:material:513>,<ore:gearSignalum>]]);

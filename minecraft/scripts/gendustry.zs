@@ -1,6 +1,6 @@
-var bronze = <thermalfoundation:material:105>;
+var bronze = <ore:nuggetBronze>;
 var gold = <minecraft:gold_nugget>;
-var flux = <RedstoneArsenal:material:64>;
+var flux = <ore:nuggetSignalum>;
 
 //change recipe IndustrialApiary
 recipes.remove(<gendustry:IndustrialApiary>);
@@ -9,12 +9,12 @@ recipes.addShaped(<gendustry:IndustrialApiary>,[[<ore:blockGlass>,<gendustry:Bee
 //change recipe PowerModule
 recipes.remove(<gendustry:PowerModule>);
 mods.avaritia.ExtremeCrafting.addShaped(<gendustry:PowerModule>,
-	[[bronze,bronze,bronze,bronze,bronze,bronze,bronze],
-	[bronze,<thermalfoundation:material:136>,<thermalfoundation:material:137>,gold,<thermalfoundation:material:137>,<thermalfoundation:material:136>,bronze],
-	[bronze,<thermalfoundation:material:140>,<thermalfoundation:material:135>,gold,<thermalfoundation:material:135>,<thermalfoundation:material:140>,bronze],
-	[bronze,gold,gold,<ore:gearGold>,gold,gold,bronze],
-	[bronze,<ExtraBees:propolis:2>,flux,flux,flux,<ExtraBees:propolis:2>,bronze],
-	[bronze,flux,<thermalfoundation:material:4>,<ic2:itemPlutoniumSmall>,<thermalfoundation:material:4>,flux,bronze],
-	[bronze,flux,<Railcraft:cube:4>,<ic2:itemPlutoniumSmall>,<Railcraft:cube:4>,flux,bronze],
-	[bronze,<ExtraBees:propolis:2>,flux,flux,flux,<ExtraBees:propolis:2>,bronze],
-	[bronze,bronze,bronze,bronze,bronze,bronze,bronze]]);
+	[[bronze,bronze,bronze,bronze,bronze,bronze,bronze,null,null],
+	[bronze,<ore:gearInvar>,<ore:gearBronze>,gold,<ore:gearBronze>,<ore:gearInvar>,bronze,null,null],
+	[bronze,<ore:gearEnderium>,<ore:gearElectrum>,gold,<ore:gearElectrum>,<ore:gearEnderium>,bronze,null,null],
+	[bronze,gold,gold,<ore:gearGold>,gold,gold,bronze,null,null],
+	[bronze,<morebees:propolisCrystal>,flux,flux,flux,<morebees:propolisCrystal>,bronze,null,null],
+	[bronze,flux,<ore:dustObsidian>,<ic2:nuclear:7>,<ore:dustObsidian>,flux,bronze,null,null],
+	[bronze,flux,<ic2:plate:6>,<ic2:nuclear:7>,<ic2:plate:6>,flux,bronze,null,null],
+	[bronze,<morebees:propolisCrystal>,flux,flux,flux,<morebees:propolisCrystal>,bronze,null,null],
+	[bronze,bronze,bronze,bronze,bronze,bronze,bronze,null,null]]);

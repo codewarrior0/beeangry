@@ -1,2 +1,7 @@
-mods.avaritia.ExtremeCrafting.remove(<avaritia:Resource:5>);
-mods.avaritia.ExtremeCrafting.addShapeless(<avaritia:Resource:5>,[<forestry:beeCombs:0>,<forestry:beeCombs:2>,<forestry:beeCombs:3>,<forestry:beeCombs:4>,<forestry:beeCombs:5>,<forestry:beeCombs:6>,<forestry:beeCombs:7>,<forestry:beeCombs:15>,<forestry:beeCombs:16>,<morebees:combRock>,<morebees:combDirt>,<morebees:combWither>,<morebees:combSlime>,<morebees:combMetallic>,<morebees:combCrystal>]);
+recipes.remove(<avaritia:matrix_ingot>);
+recipes.addShaped(<avaritia:matrix_ingot>,[[<morebees:diamondFragment>,<morebees:diamondFragment>,<morebees:diamondFragment>],[<morebees:diamondFragment>,<morebees:nether_starFragment>,<morebees:diamondFragment>],[<morebees:diamondFragment>,<morebees:diamondFragment>,<morebees:diamondFragment>]]);
+
+var steelp = <ore:plateSteel>;
+var steeln = <ore:nuggetSteel>;
+
+mods.avaritia.ExtremeCrafting.addShaped(<immersiveengineering:mold:1>,[[steelp,steelp,steelp,steelp,steelp,steelp,steelp,steelp,steelp],[steelp,steelp,steeln,steelp,null,steelp,steeln,steelp,steelp],[steelp,steeln,null,steeln,null,steeln,null,steeln,steelp],[steelp,steelp,steeln,null,null,null,steeln,steelp,steelp],[steelp,null,null,null,null,null,null,null,steelp],[steelp,steelp,steeln,null,null,null,steeln,steelp,steelp],[steelp,steeln,null,steeln,null,steeln,null,steeln,steelp],[steelp,steelp,steeln,steelp,null,steelp,steeln,steelp,steelp],[steelp,steelp,steelp,steelp,steelp,steelp,steelp,steelp,steelp]]);

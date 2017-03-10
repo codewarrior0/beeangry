@@ -1,0 +1,2 @@
+mods.avaritia.ExtremeCrafting.remove(<avaritia:Resource:5>);
+mods.avaritia.ExtremeCrafting.addShapeless(<avaritia:Resource:5>,[<forestry:beeCombs:0>,<forestry:beeCombs:2>,<forestry:beeCombs:3>,<forestry:beeCombs:4>,<forestry:beeCombs:5>,<forestry:beeCombs:6>,<forestry:beeCombs:7>,<forestry:beeCombs:15>,<forestry:beeCombs:16>,<morebees:combRock>,<morebees:combDirt>,<morebees:combWither>,<morebees:combSlime>,<morebees:combMetallic>,<morebees:combCrystal>]);

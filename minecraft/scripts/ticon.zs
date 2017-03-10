@@ -1,9 +1,9 @@
-//add recipeSmeltery HoneyDrop
-mods.tconstruct.Smeltery.addMelting(<liquid:for.honey> * 50, <ore:beeComb>, 300,<botania:bifrostPerm>);
 mods.tconstruct.Casting.addTableRecipe(<forestry:honeyDrop>, <liquid:for.honey> * 100, null, false, 20);
 
-//add recipeDrying Beeswax
 for comb in <ore:beeComb>.items {
+    // melt combs to honey
+    mods.tconstruct.Smeltery.addMelting(<liquid:for.honey> * 50, comb, 300,<botania:bifrostPerm>);
+    // dry combs to wax
     mods.tconstruct.Drying.addRecipe(comb, <forestry:beeswax>, 6000);
 }
 
